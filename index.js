@@ -21,4 +21,19 @@ if (!fs.existsSync(filepath)) {
     process.exit(1);
 }
 
+const filecontent = fs.readFileSync(filepath, 'utf-8');
+
+if (options.output && options.display) {
+    fs.writeFileSync(options.output, outputData.join("\n")); 
+    console.log(outputData.join("\n"));
+} else {
+    if (options.output) {
+        fs.writeFileSync(options.output, outputData.join("\n")); 
+    }
+
+    if (options.display) {
+        console.log(outputData.join("\n")); 
+    }
+}
+
 
