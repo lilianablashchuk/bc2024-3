@@ -2,7 +2,7 @@ const { program } = require('commander');
 const fs = require('node:fs');
 
 program
-    .requiredOption('-i, --input <char>', 'path to file, which to read') 
+    .option('-i, --input <char>', 'path to file, which to read') 
     .option('-o, --output <char>', 'path to file, where result will be') 
     .option('-d, --display', 'show result in console'); 
 
